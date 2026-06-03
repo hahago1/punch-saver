@@ -1,0 +1,23 @@
+{
+  "name": "punch-saver",
+  "version": "1.0.0",
+  "description": "机械存档 Claude Code 会话：Stop/SessionStart 自动保存 transcript，MD5 去重，JSONL + Markdown 双格式，90 天滚动清理。像工厂流水线的打卡按钮，按一下，留一份。",
+  "author": {
+    "name": "hahago1",
+    "email": "jiajia1048@qq.com"
+  },
+  "homepage": "https://github.com/hahago1/punch-saver",
+  "repository": "https://github.com/hahago1/punch-saver",
+  "license": "MIT",
+  "keywords": [
+    "session",
+    "transcript",
+    "backup",
+    "save",
+    "archive",
+    "jsonl",
+    "markdown",
+    "punch",
+    "auto-save"
+  ]
+}
