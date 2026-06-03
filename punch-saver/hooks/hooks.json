@@ -1,0 +1,25 @@
+{
+  "description": "机械存档：Stop 时保存最新 transcript，SessionStart 时补存上次可能漏掉的（覆盖 Ctrl+C 场景）",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/save-session.sh\" previous"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/save-session.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
