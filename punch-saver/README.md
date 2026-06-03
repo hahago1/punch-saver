@@ -22,16 +22,28 @@ Claude Code 插件。在每次会话结束时自动保存原始 transcript（JSO
 ## 安装 / Install
 
 ```bash
-claude plugin install hahago1/punch-saver
+# 1. 添加插件源
+claude plugin marketplace add hahago1/punch-saver
+
+# 2. 安装插件
+claude plugin install punch-saver@punch-saver-marketplace
 ```
 
-安装后即可生效，无需额外配置。存档文件在 `~/.claude/sessions/`。
+或者直接 clone：
+
+```bash
+git clone https://github.com/hahago1/punch-saver ~/.claude/plugins/punch-saver
+```
+
+安装后重启 Claude Code 即可生效。存档文件在 `~/.claude/sessions/`。
 
 ## 文件说明 / Files
 
 ```
 punch-saver/
-├── .claude-plugin/plugin.json   # 插件元信息
+├── .claude-plugin/
+│   ├── plugin.json              # 插件元信息
+│   └── marketplace.json         # 插件源定义
 ├── hooks/
 │   ├── hooks.json               # 声明 Stop + SessionStart 钩子
 │   ├── save-session.sh           # 核心存档脚本
